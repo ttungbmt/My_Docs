@@ -17,6 +17,7 @@ const sidebars = {
   
   ubuntu: [
     'os/ubuntu/get-started',
+    'os/ubuntu/GUI',
     'os/ubuntu/system-information',
     'os/ubuntu/hardware-information',
     'os/ubuntu/file-permissions',
@@ -25,6 +26,7 @@ const sidebars = {
     'os/ubuntu/search',
     'os/ubuntu/disk-usage',
     'os/ubuntu/ssh',
+    'os/ubuntu/ftp-server',
     'os/ubuntu/firewall',
   ],
 };
