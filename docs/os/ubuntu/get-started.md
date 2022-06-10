@@ -1,7 +1,3 @@
----
-displayed_sidebar: ubuntu
----
-
 # Get Started
 
 - https://github.com/JREAM/ubuntu-cheatsheet
@@ -73,3 +69,4 @@ nvm exec 8.11.1 node app.js
 df -h
 df -h ~/VNTT
 ```
+

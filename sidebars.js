@@ -13,8 +13,77 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
+  geonode: [
+    'gis/geonode/get-started',
+    'gis/geonode/geoserver',
+  ],
 
-  
+  geoserver: [
+    'gis/geoserver/get-started',
+  ],
+
+
+  development: [
+    'development/react',
+    'development/vue',
+    'development/alpine',
+    'development/laravel',
+    'development/django',
+    'development/elasticsearch',
+    {
+      type: 'category',
+      label: 'Editor',
+      items: [
+        'development/editor/micro',
+        'development/editor/phpstorm',
+        'development/editor/vscode',
+        'development/editor/phpstorm',
+        'development/editor/pycharm',
+        'development/editor/vim',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'DevOps',
+      items: [
+        'development/devops/docker',
+        'development/devops/kubernetes',
+        'development/devops/github',
+        'development/devops/gitlap',
+      ]
+    }
+  ],
+
+  gis: [
+    'gis/get-started',
+    {
+      type: 'category',
+      label: 'GIS Server',
+      collapsed: false,
+      items: [
+        {
+          type: 'link',
+          label: 'Geonode',
+          href: '/docs/gis/geonode/get-started',
+        },
+        {
+          type: 'link',
+          label: 'Geoserver',
+          href: '/docs/gis/geoserver/get-started',
+        },
+      ]
+    },
+    {
+      type: 'category',
+      label: 'GIS Desktop',
+      items: [
+        'gis/qgis',
+        'gis/arcgis',
+        'gis/arcgis-pro',
+      ]
+    },
+  ],
+
   ubuntu: [
     'os/ubuntu/get-started',
     'os/ubuntu/GUI',
@@ -28,7 +97,13 @@ const sidebars = {
     'os/ubuntu/ssh',
     'os/ubuntu/ftp-server',
     'os/ubuntu/firewall',
+    'os/ubuntu/faq',
   ],
+
+  windows: [
+    'os/windows/get-started',
+    'os/windows/wsl',
+  ]
 };
 
 module.exports = sidebars;

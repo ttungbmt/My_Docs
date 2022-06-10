@@ -7,7 +7,7 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
+    "deploy": " GIT_USER=ttungbmt docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
@@ -15,6 +15,8 @@
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.21",
+    "@docusaurus/plugin-google-analytics": "^2.0.0-beta.21",
+    "@docusaurus/plugin-sitemap": "^2.0.0-beta.21",
     "@docusaurus/preset-classic": "2.0.0-beta.21",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.1.1",

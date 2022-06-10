@@ -1,5 +1,0 @@
-# Window
-
-```shell
-wsl --shutdown
-```

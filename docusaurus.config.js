@@ -2,7 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 require('dotenv').config();
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
+const lightCodeTheme = require('prism-react-renderer/themes/palenight');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
@@ -66,9 +66,39 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
+            docId: 'development/get-started',
+            label: 'Development',
+          },
+          {
+            type: 'dropdown',
+            label: 'Database',
+            items: [
+              {
+                type: 'doc',
+                label: 'PostgreSQL',
+                docId: 'database/postgresql',
+              },
+              {
+                type: 'doc',
+                label: 'MySQL',
+                docId: 'database/mysql',
+              },
+              {
+                type: 'doc',
+                label: 'MongoDB',
+                docId: 'database/mongodb',
+              },
+              {
+                type: 'doc',
+                label: 'Firebase',
+                docId: 'database/firebase',
+              },
+            ]
+          },
+          {
+            type: 'doc',
+            label: 'GIS',
+            docId: 'gis/get-started',
           },
           {
             type: 'dropdown',
@@ -83,26 +113,27 @@ const config = {
               {
                 type: 'doc',
                 label: 'Windows',
-                docId: 'os/windows',
+                docId: 'os/windows/get-started',
               },
             ]
           },
           {
             type: 'dropdown',
-            label: 'Database',
-            position: 'left',
+            label: 'Other',
             items: [
               {
                 type: 'doc',
-                label: 'PostgreSQL',
-                docId: 'database/postgresql',
+                label: 'Map Providers',
+                docId: 'other/map-providers',
               },
-              {
-                type: 'doc',
-                label: 'MySQL',
-                docId: 'database/mysql',
-              },
+
             ]
+          },
+          {
+            type: 'doc',
+            docId: 'intro',
+            position: 'left',
+            label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
