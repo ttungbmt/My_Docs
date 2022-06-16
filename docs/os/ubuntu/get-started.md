@@ -70,3 +70,5 @@ df -h
 df -h ~/VNTT
 ```
 
+## GUI
+- https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps

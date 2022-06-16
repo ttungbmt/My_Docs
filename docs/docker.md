@@ -19,3 +19,16 @@ docker-compose down CONTAINER
 
 docker-compose -f <docker-compose-file> up
 ```
+
+Show Docker IPs
+
+```shell
+docker ps -q | xargs -n 1 docker inspect --format '{{ .Name }} {{range .NetworkSettings.Networks}} {{.IPAddress}}{{end}}' | sed 's#^/##';
+
+docker inspect mynginx | grep IPAddress
+```
+
+```shell
+docker system df
+docker ps --size
+```

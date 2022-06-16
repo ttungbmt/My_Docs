@@ -57,6 +57,13 @@ docker-compose build --no-cache
 docker-compose up -d
 ```
 
+:::danger Error
+
+- Login Geoserver: Mismatching redirect URI.
+
+:::
+
+
 ## Geonode 3.3.x
 Worked
 ```shell
@@ -80,3 +87,93 @@ docker-compose up -d
 # Error: Thumbnail
 # Error: Dev (not found js)
 ```
+
+---------------------
+
+## GeoPortal 
+
+`exec: "/usr/src/geonode/entrypoint.sh": permission denied: unknown`
+
+Run command to set permissions
+```shell
+sudo chmod -Rf 775 ~/VNTT/GeoPortal33
+```
+
+Add file
+
+```yaml
+version: '3.4'
+
+services:
+
+  django:
+    build: .
+    # Loading the app is defined here to allow for
+    # autoreload on changes it is mounted on top of the
+    # old copy that docker added when creating the image
+    volumes:
+      - '.:/usr/src/app'
+    environment:
+      - DEBUG=False
+      - GEONODE_LB_HOST_IP=geoportal.local
+      - GEONODE_LB_PORT=90
+      - SITEURL=http://geoportal.local:90/
+      - GEOSERVER_PUBLIC_LOCATION=http://geoportal.local:90/geoserver/
+      - GEOSERVER_WEB_UI_LOCATION=http://geoportal.local:90/geoserver/
+
+  celery:
+    build: .
+    volumes:
+      - '.:/usr/src/app'
+    environment:
+      - DEBUG=False
+      - GEONODE_LB_HOST_IP=geoportal.local
+      - GEONODE_LB_PORT=90
+      - SITEURL=http://geoportal.local:90/
+      - GEOSERVER_PUBLIC_LOCATION=http://geoportal.local:90/geoserver/
+      - GEOSERVER_WEB_UI_LOCATION=http://geoportal.local:90/geoserver/
+
+  geoserver:
+    environment:
+      - GEONODE_LB_HOST_IP=geoportal.local
+      - GEONODE_LB_PORT=90
+  
+
+  geonode:
+    environment:
+      # - HTTPS_HOST=${HTTPS_HOST}
+      - HTTP_HOST=geoportal.local
+    ports:
+      - "90:80"
+      - "4490:443"
+```
+
+Edit .env
+
+```apacheconf
+GEONODE_CLIENT_LAYER_PREVIEW_LIBRARY=mapstore # react, leaflet, mapstore
+MAPBOX_ACCESS_TOKEN=pk.eyJ1IjoidHR1bmdibXQiLCJhIjoiY2t3ZGFqeTJxMGlscDJ2cG45MmNtam5hbSJ9.L-f-WvMUFZSDvbw07xUlZA
+
+DEFAULT_MAP_CENTER_X=
+DEFAULT_MAP_CENTER_Y=
+DEFAULT_MAP_ZOOM=
+```
+
+```shell
+ADMIN_SITE_HEADER = "My shiny new administration"
+ADMIN_SITE_HEADER = "My shiny new administration"
+ADMIN_SITE_TITLE = "My shiny new administration"
+```
+
+Edit urls.py
+
+```shell
+from django.contrib import admin
+from django.conf import settings
+
+admin.site.site_header = settings.ADMIN_SITE_HEADER
+admin.site.site_title = settings.ADMIN_SITE_TITLE
+admin.site.index_title = settings.ADMIN_INDEX_TITLE
+```
+
+- https://docs.geonode.org/en/master/admin/mgmt_commands/index.html
