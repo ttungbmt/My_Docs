@@ -29,7 +29,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ```shell
 choco install unikey winrar foxitreader everything k-litecodecpackfull
-choco install firefox notepadplusplus.install
+choco install firefox notepadplusplus.install jre8 nodejs.install
 ```
 
 ```shell
