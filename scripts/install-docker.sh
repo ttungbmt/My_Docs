@@ -29,3 +29,7 @@ sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 # Add your user account to docker group.
 sudo usermod -aG docker $USER
 newgrp docker
+
+# Fix permissions (unix:///var/run/docker.sock )
+sudo chmod 666 /var/run/docker.sock
+sudo systemctl restart docker
