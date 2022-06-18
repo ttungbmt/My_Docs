@@ -102,6 +102,7 @@ const sidebars = {
 
   windows: [
     'os/windows/get-started',
+    'os/windows/chocolatey',
     'os/windows/wsl',
     'os/windows/hyper-v',
   ]

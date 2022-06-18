@@ -12,12 +12,13 @@ title: Get Started
 - [Foxit Reader](https://www.foxit.com/downloads/#Foxit-Reader/)
 - [Everything](https://www.voidtools.com/)
 - [IDM](https://downloadly.ir/software/internet/internet-download-manager-idm/)
-- Chocolatey
 - [UltraSurf](https://download.com.vn/ultrasurf-52061)
 - [IObit Uninstaller Pro](https://downloadly.ir/software/utility/iobit-uninstaller/)
 - [IObit Smart Defrag Pro](https://downloadly.ir/software/optimizer/iobit-smart-defrag/)
 - [Klite Codec](https://codecguide.com/download_k-lite_codec_pack_full.htm)
 - WSL: Ubuntu
+- [Chocolatey](https://chocolatey.org/install)
+
 
 
 ## Văn phòng
@@ -41,6 +42,7 @@ title: Get Started
 - Google Earth Pro
 
 ## Developer
+- [Docker](https://www.docker.com/products/docker-desktop/)
 - Java [JRE](https://www.oracle.com/java/technologies/javase-jre8-downloads.html), [JDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 - [GitHub Desktop](https://desktop.github.com)
 - [Navicat Premium](https://downloadly.ir/software/programming/navicat-premium/)
@@ -73,4 +75,33 @@ title: Get Started
 - [VLC Media](https://www.videolan.org/)
 - [TreeSize](https://www.jam-software.com/treesize_free?ca=1)
 
+## Chocolatey
+- Google Chrome
+- Mozilla Firefox
+- Java SE Runtime Environment
+- Java Runtime (JRE)
+- Notepad++
+- Python
+- VLC media player
+- Git
+- Node JS
+- Foxit PDF Reader
+- Visual Studio Code
+- FileZilla
+- WinSCP `winscp.install`
+- TreeSize Free
+- Windows Terminal `microsoft-windows-terminal`
+- K-Lite Codec Pack Full `k-litecodecpackfull`
+- iTunes `itunes`
+- Chocolatey GUI `chocolateygui`
+- Ruby `ruby`
+- Postman `postman`
+- Everything `everything`
+- Docker Desktop `docker-desktop`
+- Pip(Python) `pip`
+- Cmder `cmder`
+- GitHub Desktop `github-desktop`
+- AnyDesk `anydesk`
+- Android Studio `androidstudio`
+- FortiClient VPN `forticlientvpn`
 
