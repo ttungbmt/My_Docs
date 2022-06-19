@@ -41,17 +41,67 @@ choco install $package -y
 } 
 ```
 
-### Install Command Line 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<packages>
+  <package id="anydesk" />
+  <package id="anydesk.portable" />
+  <package id="chocolatey" />
+  <package id="chocolatey-compatibility.extension" />
+  <package id="chocolatey-core.extension" />
+  <package id="chocolatey-dotnetfx.extension" />
+  <package id="chocolateygui" />
+  <package id="DotNet4.5.2" />
+  <package id="dotnetfx" />
+  <package id="Firefox" />
+  <package id="git.install" />
+  <package id="github-desktop" />
+  <package id="KB2919355" />
+  <package id="KB2919442" />
+  <package id="notepadplusplus" />
+  <package id="notepadplusplus.install" />
+  <package id="unikey" />
+  <package id="vscode" />
+  <package id="vscode.install" />
+  <package id="winrar" />
+  <package id="yarn" />
+</packages>
+```
+
+Packages not working
+
 ```shell
-choco install notepadplusplus googlechrome atom 7zip 
+foxitreader
+```
+
+### Cheatsheet
+
+```shell
+choco export -h
+choco export 
+
+# Maintenance
+choco list -lo # choco list --localonly
+choco outdated
+choco upgrade all -y
+
+# Export
+choco export
+choco export -o="'D:\Softs\packages.config'"
+choco export -o="'D:\Softs\packages.config'" --include-version-numbers
+
+# Install
+choco install PACKAGENAME -y
+choco install D:\Softs\Chocolatey\packages.config -y
+choco install notepadplusplus googlechrome atom 7zip -y # Multiple Package Installation
 choco install git -y --install-args="'/DIR=E:\PROGRAM\Chocolatey\tools'" 
 choco install filezilla --% -y --ia="/D=D:\PROGRAM\FileZilla"  
 choco install nodejs.install --version 0.10.35 
-```
 
-### Uninstall Command Line 
-```shell
+# Uninstall
 choco uninstall notepadplusplus googlechrome atom 7zip 
 choco uninstall ruby --version 1.8.7.37402 
 choco uninstall nodejs.install --all-versions 
 ```
+
+## 

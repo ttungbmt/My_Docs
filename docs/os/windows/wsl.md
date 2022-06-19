@@ -1,6 +1,13 @@
 # WSL
 
 ## Installation
+Enable Windows Subsystem for Linux system feature
+
+Open PowerShell as Administrator and run the following command to enable WSL feature:
+```shell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+
 Download the latest package: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi and install
 ```shell
 wsl --set-default-version 2
@@ -13,6 +20,8 @@ wsl
 lsb_release -a
 ```
 
+## Install Ubuntu on a Non-System Drive
+https://kontext.tech/article/308/how-to-install-windows-subsystem-for-linux-on-a-non-c-drive
 
 ## Move WSL 2 Safely to another Drive
 1. Open a **PowerShell** with Admin access
@@ -32,8 +41,8 @@ wsl --unregister Ubuntu
 ```
 5. Create a new folder and import your WSL installation to that folder.
 ```shell
-mkdir -p D:\Programs\WSL
-wsl --import Ubuntu "D:\Programs\WSL" "D:\export\ubuntu-ex.tar"
+mkdir -p D:\Programs\WSL\Ubuntu
+wsl --import Ubuntu "D:\Programs\WSL\Ubuntu" "D:\export\ubuntu-ex.tar"
 ```
 6. Check after import is complete
 ```shell
