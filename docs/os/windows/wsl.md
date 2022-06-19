@@ -1,6 +1,8 @@
 # WSL
 
-## Installation
+## Enable Windows Subsystem for Linux system feature
+
+## Installation via Microsoft Store
 Enable Windows Subsystem for Linux system feature
 
 Open PowerShell as Administrator and run the following command to enable WSL feature:
@@ -22,6 +24,49 @@ lsb_release -a
 
 ## Install Ubuntu on a Non-System Drive
 https://kontext.tech/article/308/how-to-install-windows-subsystem-for-linux-on-a-non-c-drive
+
+Download a Linux distro
+
+```shell
+mkdir -p D:\Programs\WSL
+cd D:\Programs\WSL
+
+Invoke-WebRequest -Uri https://aka.ms/wslubuntu -OutFile Ubuntu.appx -UseBasicParsing
+
+# Rename the downloaded file
+move .\Ubuntu.appx .\Ubuntu.zip
+
+# Extract the zip to Ubuntu folder
+Expand-Archive .\Ubuntu.zip
+```
+
+The following distros are available:
+- [Ubuntu](https://aka.ms/wslubuntu)
+- [Ubuntu 20.04](https://aka.ms/wslubuntu2004)
+- [Ubuntu 20.04 ARM](https://aka.ms/wslubuntu2004arm)
+- [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
+- [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm)
+- [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)
+- [Debian GNU/Linux](https://aka.ms/wsl-debian-gnulinux)
+- [Kali Linux](https://aka.ms/wsl-kali-linux-new)
+- [SUSE Linux Enterprise Server 12](https://aka.ms/wsl-kali-linux-new)
+- [SUSE Linux Enterprise Server 15 SP2](https://aka.ms/wsl-SUSELinuxEnterpriseServer15SP2)
+- [SUSE Linux Enterprise Server 15 SP3](https://aka.ms/wsl-SUSELinuxEnterpriseServer15SP3)
+- [openSUSE Tumbleweed](https://aka.ms/wsl-opensuse-tumbleweed)
+- [openSUSE Leap 15.3](https://aka.ms/wsl-opensuseleap15-3)
+- [openSUSE Leap 15.2](https://aka.ms/wsl-opensuseleap15-2)
+- [Oracle Linux 8.5](https://aka.ms/wsl-oraclelinux-8-5)
+- [Oracle Linux 7.9](https://aka.ms/wsl-oraclelinux-7-9)
+- [Fedora Remix for WSL](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
+
+Or download via IDM: https://aka.ms/wslubuntu
+
+```shell
+
+# Go to Ubuntu folder
+cd Ubuntu
+.\Ubuntu2004.exe
+```
 
 ## Move WSL 2 Safely to another Drive
 1. Open a **PowerShell** with Admin access

@@ -41,39 +41,6 @@ choco install $package -y
 } 
 ```
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<packages>
-  <package id="anydesk" />
-  <package id="anydesk.portable" />
-  <package id="chocolatey" />
-  <package id="chocolatey-compatibility.extension" />
-  <package id="chocolatey-core.extension" />
-  <package id="chocolatey-dotnetfx.extension" />
-  <package id="chocolateygui" />
-  <package id="DotNet4.5.2" />
-  <package id="dotnetfx" />
-  <package id="Firefox" />
-  <package id="git.install" />
-  <package id="github-desktop" />
-  <package id="KB2919355" />
-  <package id="KB2919442" />
-  <package id="notepadplusplus" />
-  <package id="notepadplusplus.install" />
-  <package id="unikey" />
-  <package id="vscode" />
-  <package id="vscode.install" />
-  <package id="winrar" />
-  <package id="yarn" />
-</packages>
-```
-
-Packages not working
-
-```shell
-foxitreader
-```
-
 ### Cheatsheet
 
 ```shell
