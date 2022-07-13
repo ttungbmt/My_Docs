@@ -50,6 +50,8 @@ nvm install node
 nvm install --lts
 # Install particular NodeJs version
 nvm install 12.13.1
+# Change default NodeJS version
+nvm alias default 16
 # UnInstall the multiple NodeJs version
 nvm uninstall 8.11.1
 ```
