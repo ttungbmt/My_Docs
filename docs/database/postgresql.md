@@ -1,5 +1,11 @@
 # PostgreSQL
 
+### Connection
+
+```shell
+DATABASE_URL: postgres://{user}:{password}@{hostname}:{port}/{database-name}
+```
+
 ### Adds a geometry column
 
 ```shell

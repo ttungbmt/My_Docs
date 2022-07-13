@@ -160,9 +160,9 @@ DEFAULT_MAP_ZOOM=
 ```
 
 ```shell
-ADMIN_SITE_HEADER = "My shiny new administration"
-ADMIN_SITE_HEADER = "My shiny new administration"
+ADMIN_SITE_HEADER = "Django administration"
 ADMIN_SITE_TITLE = "My shiny new administration"
+ADMIN_INDEX_TITLE = "Site administration"
 ```
 
 Edit urls.py

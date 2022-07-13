@@ -1,6 +1,34 @@
 # Docker
 
 ## Installation
+Install Docker CE
+```shell
+# Update System
+sudo apt -y update
+
+# Install basic dependencies
+sudo apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+
+# Remove old versions
+sudo apt remove docker docker-engine docker.io containerd runc
+
+# Import Docker repository GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-archive-keyring.gpg
+
+# Add Docker CE repository to Ubuntu
+sudo add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+# Install Docker CE
+sudo apt -y update
+sudo apt -y install docker-ce docker-ce-cli containerd.io
+```
+Install Docker Compose v2
+
+```shell
+mkdir -p ~/.docker/cli-plugins/
+curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+chmod +x ~/.docker/cli-plugins/docker-compose
+```
 
 ## Push Image to Docker Hub
 ```shell
