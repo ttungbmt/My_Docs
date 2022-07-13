@@ -72,5 +72,10 @@ df -h
 df -h ~/VNTT
 ```
 
+## Check IP
+```shell
+curl ifconfig.me
+```
+
 ## GUI
 - https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps
