@@ -79,3 +79,34 @@ curl ifconfig.me
 
 ## GUI
 - https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps
+- 
+## User
+Adding a User
+```shell
+# Adding a New User to the System
+sudo adduser newuser
+
+# Adding the User to the sudo Group
+sudo usermod -aG sudo newuser
+
+# Testing sudo Access
+sudo su - newuser
+```
+
+Deleting a User
+```shell
+sudo deluser newuser
+
+sudo deluser --remove-home newuser
+```
+
+Assign a login password for the new user
+```shell
+sudo passwd newuser
+```
+
+Checking User
+
+```shell
+sudo grep newuser /etc/passwd
+```
