@@ -82,3 +82,18 @@ docker system df
 docker ps --size
 ```
 
+
+## Check space
+
+```shell
+docker system df
+
+# Space used by each container, image and volume
+docker system df -v
+
+# Filter only >= 1GB
+docker system df -v | grep GB
+
+# Space used by running containers
+docker ps -s
+```
