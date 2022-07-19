@@ -126,7 +126,11 @@ const config = {
                 label: 'Map Providers',
                 docId: 'other/map-providers',
               },
-
+              {
+                type: 'doc',
+                label: 'ngrok',
+                docId: 'other/ngrok',
+              },
             ]
           },
           {

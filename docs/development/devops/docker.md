@@ -82,6 +82,11 @@ docker system df
 docker ps --size
 ```
 
+## Fix permissions
+- https://linuxhandbook.com/docker-permission-denied/
+
+## CI/CD Github
+- https://github.com/cytechmobile/logstash-postgres/blob/master/.github/workflows/docker-image.yml
 
 ## Check space
 
