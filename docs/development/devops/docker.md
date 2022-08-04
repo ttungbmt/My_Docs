@@ -46,7 +46,10 @@ docker push becagis/workspace:latest
 
 ```shell
 # Stop containers and remove volumes
-docker-compose down -v
+docker-compose down -
+
+# Stop and remove a container 
+docker stop CONTAINER && docker rm $_
 
 # Force kill all containers by running
 docker kill $(docker ps -q)

@@ -102,6 +102,16 @@ const sidebars = {
 
   windows: [
     'os/windows/get-started',
+    {
+      type: 'category',
+      label: 'Virtual Machine',
+      collapsed: false,
+      items: [
+        'os/windows/virtual-machine/multipass',
+        'os/windows/virtual-machine/vagrant',
+      ]
+    },
+    'os/windows/powershell',
     'os/windows/chocolatey',
     'os/windows/portainer',
     'os/windows/terminal',
