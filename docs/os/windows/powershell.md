@@ -70,16 +70,22 @@ Set-PsFzfOption -PsReadLineChordProvider 'Ctrl+f' -PSReadLineChordReverseHistory
 function goto_cdserver { set-location "D:\VNTT\SERVER" }
 function goto_cdproject { set-location "D:\VNTT\PROJECT" }
 function goto_cdvagrant { set-location "D:\VNTT\SERVER\BecaGIS_Vagrant" }
+function goto_cdhomestead { set-location "D:\VNTT\SERVER\Homestead" }
+function do_vagrant_up { vagrant up }
+function do_vagrant_destroy_parallel { vagrant destroy --parallel }
 
 # Alias (Optional)
 Set-Alias g git
-Set-Alias v vagrant
 Set-Alias d docker
 Set-Alias dc docker-compose
+Set-Alias v vagrant
+Set-Alias vu do_vagrant_up
+Set-Alias vdp do_vagrant_destroy_parallel
 
 Set-Alias cd_server goto_cdserver
 Set-Alias cd_project goto_cdproject
 Set-Alias cd_vagrant goto_cdvagrant
+Set-Alias cd_homestead goto_cdhomestead
 
 $work= @{
     project = 'D:\VNTT\PROJECT'

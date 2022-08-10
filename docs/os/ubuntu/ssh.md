@@ -32,3 +32,20 @@ sshpass -p PASSWORD ssh -p PORT USERNAME@
 ssh-keygen
 ssh-copy-id -i ~/.ssh/id_rsa.pub USERNAME@IP
 ```
+
+## Disable Strict Host Key Checking
+Method 1
+```shell
+ssh -o StrictHostKeyChecking=no user@remote-host
+```
+
+Method 2:
+```shell
+vi ~/.ssh/config
+sudo chmod ~/.ssh/config
+```
+```shell
+Host *
+    StrictHostKeyChecking no
+```
+

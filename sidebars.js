@@ -50,6 +50,7 @@ const sidebars = {
         'development/devops/kubernetes',
         'development/devops/github',
         'development/devops/gitlap',
+        'development/devops/ansible',
       ]
     }
   ],
