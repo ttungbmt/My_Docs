@@ -29,8 +29,10 @@ sshpass -p PASSWORD ssh -p PORT USERNAME@
 
 ## Setting Up SSH Keys
 ```shell
-ssh-keygen
+ssh-keygen -t ed25519 -C "ttungbmt@gmail.com"
+
 ssh-copy-id -i ~/.ssh/id_rsa.pub USERNAME@IP
+ssh-copy-id -i ~/.ssh/id_ed25519.pub USERNAME@IP
 ```
 
 ## Disable Strict Host Key Checking
