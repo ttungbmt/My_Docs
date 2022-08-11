@@ -49,3 +49,17 @@ Host *
     StrictHostKeyChecking no
 ```
 
+## Configure
+
+```shell
+Host *
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+
+Host homestead
+  HostName 192.168.10.10
+  User vagrant
+  Port 22
+  IdentityFile ~/.ssh/insecure_private_key
+```
+
