@@ -113,3 +113,9 @@ choco install D:\Softs\Chocolatey\development.config -y
 - Android Studio `androidstudio`
 - FortiClient VPN `forticlientvpn`
 
+## Kill port
+```shell
+netstat -ano | findstr :<PORT>
+taskkill /PID <PID> /F
+```
+
